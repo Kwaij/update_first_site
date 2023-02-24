@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head> 
+<body>
+    <main>
+        <div class="block_1">
+            <img class="logo" src="{% static 'main/img/logo.png' %}" alt="">
+            <h1 class="name_site">Название</h1>
+            <div class="navigation">
+                <ul class="navigation">
+                    <a class="navigation" href="{% url 'home' %}"><li class="navigation">Главная</li></a>
+                    <a class="navigation" href="{% url 'news_home' %}"><li class="navigation">Новости</li></a>
+                    <a class="navigation" href="{% url 'about' %}"><li class="navigation_last">О нас</li></a>
+                </ul>
+            </div>
+        </div>
+        <div class="block_2">
+        {% block content %} 
+        {% endblock %}
+        </div>
+    </main>
+</body>
+</html>

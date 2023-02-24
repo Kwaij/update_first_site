@@ -1,0 +1,10 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ tech.title }}{% endblock %}
+
+{% block content %}
+    <h1 class="main">{{ tech.title }}</h1>
+    <p class="main"><img class="main" src="{{ tech.image.url }}"></p>
+    <p class="main">{{ tech.full_text }}</p>
+{% endblock %}

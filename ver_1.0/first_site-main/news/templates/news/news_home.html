@@ -1,0 +1,11 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Новости на сайте{% endblock %}
+
+{% block content %}
+        <h1 class="main">Новости на сайте:</h1>
+        {% for el in news %}
+            <a class="main" href="{% url 'news_dv' el.id %}"><p class="main">{{ el.title }} "Просмотреть"</p></a>
+            <p class="main">{{ el.date }}</p><br>
+        {% endfor %}
+{% endblock %}

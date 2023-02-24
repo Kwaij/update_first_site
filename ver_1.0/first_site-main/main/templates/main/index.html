@@ -1,0 +1,12 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+    <h1 class="main">Доступная техника:</h1>
+    {% for el in tech %}
+        <p class="main"><img class="main" src="{{ el.image.url }}"></p>
+        <a class="main" href="{% url 'tech_dv' el.id %}"><p class="main">{{ el.title }} "Просмотреть"</p></a><br>
+    {% endfor %}
+{% endblock %}
