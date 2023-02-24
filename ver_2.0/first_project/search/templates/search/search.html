@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+    <br><h1 class="main">Поиск по сайту</h1><br>
+    {% if object_list %}
+        {% for el in object_list %}
+            <div class="content">
+                <ul class="content">
+                    <li class="content"><h1 class="name">{{ el.title }}</h1></li>
+                    {% if el.date %}
+                    <li class="content_last"><p class="date">Дата публикации: {{ el.date }}</p><br></li>
+                    {% endif %}
+                </ul>
+                {% if el.image %}
+                <img class="content" src="{{ el.image.url }}">
+                {% endif %}
+                <p class="content">{{ el.full_text|truncatewords:10 }}</p><br>
+                <a class="content" href="{{ el.get_absolute_url }}"><b>"Просмотреть"</b></a><br>
+            </div><br>
+        {% endfor %}
+    {% else %}
+        <p class="main">Не найдено</p>
+    {% endif %}
+{% endblock %}
