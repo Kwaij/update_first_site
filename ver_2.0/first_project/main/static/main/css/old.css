@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(40, 40, 40);
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+header {
+    float: left;
+    margin-left: 15%;
+    width: 70%;
+    background: rgb(255, 255, 0, 0.8);
+    border-left: 1px solid rgb(0, 255, 255);
+    border-right: 1px solid rgb(0, 255, 255);
+    z-index: 1;
+}
+
+main {
+    float: left;
+    margin-left: 15%;
+    width: 70%;
+    min-height: 100vh;
+    background: rgba(255, 255, 0, 0.8);
+    border-left: 1px solid rgb(0, 255, 255);
+    border-right: 1px solid rgb(0, 255, 255);
+    opacity: 1;
+    z-index: 2;
+}
+
+footer {
+    float: left;
+    margin-left: 15%;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 255, 255);
+    border-bottom: 0;
+    width: 70%;
+    height: 100px;
+    z-index: 3;
+}
+
+#head {
+    width: 100%;
+    height: 80px;
+}
+
+#navigation {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: rgb(0, 0, 0);
+    border-top: 1px solid rgb(0, 255, 255);
+    border-bottom: 1px solid rgb(0, 255, 255);
+}
+
+div.content {
+    background: rgb(0, 0, 0);
+    width: 80%;
+    margin-left: 10%;
+    border: 1px solid rgb(0, 255, 255);
+    border-radius: 15px;
+}
+
+div.goTop {
+    position: fixed;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0, 0.9);
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    left: 10%;
+    bottom: 65px;
+    border: 1px solid rgb(0, 255, 255);
+    border-radius: 50%;
+}
+
+a.main {
+    color: rgb(255, 255, 0);
+    text-decoration: none;
+}
+
+a.main:hover {
+    color: rgb(0, 255, 255);
+    text-decoration: none;
+}
+
+a.main:active {
+    color: rgb(255, 255, 0);
+    text-decoration: none;
+}
+
+a.main:visited {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a.home {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a.home:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a.content {
+    color: rgb(255, 255, 0);
+    text-decoration: none;
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a.content:hover {
+    color: rgb(0, 255, 255);
+    text-decoration: none;
+}
+
+a.navigation {
+    color: rgb(255, 255, 0);
+    text-decoration: none;
+}
+
+a.navigation:hover {
+    color: rgb(0, 255, 255);
+    text-decoration: none;
+}
+
+a.goTop {
+    color: rgb(255, 255, 0);
+    text-decoration: none;
+}
+
+a.goTop:hover {
+    color: rgb(0, 255, 255);
+    text-decoration: none;
+}
+
+ul.navigation {
+    float: left;
+    margin-left: 5%;
+}
+
+li.navigation {
+    text-decoration: none;
+    display: inline;
+    padding: 10px;
+    border: 0; 
+}
+
+li.navigation:hover {
+    text-decoration: none;
+}
+
+h1.name_site {
+    float: left;
+    color: black;
+    font-size: 30px;
+    margin-top: 39px;
+    margin-left: 40px;
+}
+
+h1.main {
+    font-size: 28pt;
+    text-align: center;
+}
+
+p.main {
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+p.about {
+    color: white;
+    margin-left: 30px;
+    text-align: left;
+}
+
+img.logo {
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+img.background {
+    position: fixed;
+    width: 100%;
+    z-index: 0;
+}
+
+img.main {
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+img.goTop {
+    width: 70px;
+    height: 70px;
+}
+
+form.search {
+    float: right;
+    margin-right: 5%;
+}
+
+input.search {
+    width: 200px;
+    height: 31px;
+    padding-left: 10px;
+    padding-right: 5px;
+    outline: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 0);
+    border-radius: 5px;
+}
+
+input.search:focus {
+    background: rgb(0, 255, 255);
+}
+
+button.search {
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    top: 0;
+    right: 0;
+    background: rgb(200, 200, 200);
+}
+
+button.search::before {
+    content: "\f105";
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+button.test {
+    color: black;
+    margin-left: 30px;
+    height: 30px;
+    background: rgb(255, 255, 0);
+    border: 1px solid rgb(0, 255, 255);
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+
+button.test:hover {
+    background: rgb(0, 255, 255);
+    border: 1px solid rgb(255, 255, 0);
+}

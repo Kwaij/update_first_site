@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Новости на сайте{% endblock %}
+
+{% block content %}
+    <br><h1 class="main">Новости на сайте:</h1><br>
+    {% for el in page_obj %}
+        <div class="content">
+            <ul class="content">
+                <li class="content"><h1 class="name">{{ el.title }}</h1></li>
+                <li class="content_last"><p class="date">Дата публикации: {{ el.date }}</p><br></li>
+            </ul>
+            <p class="content">{{ el.full_text|truncatewords:10 }}</p><br>
+            <a class="content" href="{{ el.get_absolute_url }}"><b>"Просмотреть"</b></a><br>
+        </div><br>
+    {% endfor %}
+{% endblock %}

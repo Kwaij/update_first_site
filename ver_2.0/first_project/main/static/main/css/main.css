@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background: rgb(40, 40, 40);
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    position: fixed;
+    float: left;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: rgb(200, 200, 200, 0.9);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    z-index: 1000;
+}
+
+main {
+    float: left;
+    margin-top: 61px;
+    margin-left: 15%;
+    width: 70%;
+    min-height: 100vh;
+    background: rgba(200, 200, 200, 0.9);
+    border-left: 2px solid rgb(0, 0, 0);
+    border-right: 2px solid rgb(0, 0, 0);
+    z-index: 1;
+}
+
+footer {
+    float: left;
+    width: 100%;
+    min-height: 200px;
+    color: rgb(255, 255, 255);
+    background: rgb(30, 30, 30, 0.9);
+    border-top: 1px solid rgb(0, 0, 0);
+    z-index: 2;
+}
+
+div.content {
+    padding: 20px;
+    padding-top: 10px;
+    background: rgb(180, 180, 180);
+    width: 80%;
+    margin-left: 9%;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+}
+
+div.footer {
+    float: left;
+    width: 300px;
+    margin-left: 15%;
+}
+
+div.links {
+    float: left;
+    margin-left: 1%;
+}
+
+nav.paginator {
+    margin-left: 5%;
+    width: 90%;
+}
+
+a.main {
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5%;
+}
+
+a.main:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(30, 30, 30);
+}
+
+a.content {
+    color: rgb(0, 0, 0);
+    display: block;
+    float: right;
+    padding: 5px;
+    border-radius: 5%;
+    border-left: 10px;
+    border-right: 10px;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a.content:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(30, 30, 30);
+}
+
+a.goTop {
+    position: fixed;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    background: rgb(200, 200, 200, 0.9);
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    left: 10%;
+    bottom: 65px;
+    border: 1px solid black;
+    border-radius: 50%;  
+}
+
+a.goTop:hover {
+    color: white;
+    background: rgb(30, 30, 30, 0.9);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+a.footer {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    margin-left: 40px;
+    padding: 5px;
+    border-radius: 10%;
+}
+
+a.footer:hover {
+    color: rgb(0, 0, 0);
+    background: white;
+}
+
+ul.content {
+    text-align: center;
+}
+
+li.content {
+    display: inline;
+}
+
+li.content_last {
+    display: inline;
+    float: right;
+}
+
+ul.navigation {
+    float: left;
+    margin-left: 5%;
+}
+
+li.navigation {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0; 
+}
+
+li.navigation:hover {
+    color: white;
+    background: rgb(30, 30, 30);
+}
+
+ul.paginator {
+    text-align: center;
+}
+
+li.paginator {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 5px;
+    color: black;
+    background: rgb(180, 180, 180);
+    border: 1px solid black;
+    border-radius: 15%; 
+}
+
+li.paginator:hover {
+    color: white;
+    background: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+li.paginator_up {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 5px;
+    color: black;
+    background: rgb(180, 180, 180);
+    border: 1px solid black;
+    border-radius: 15%; 
+}
+
+h1.name_site {
+    float: left;
+    color: black;
+    font-size: 30px;
+    margin-left: 1%;
+}
+
+h1.main {
+    font-size: 28pt;
+    text-align: center;
+}
+
+h1.name {
+    width: max-content;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+h1.footer {
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 30px;
+    color: white;
+}
+
+h1.footer_name {
+    float: left;
+    color: rgb(255, 255, 255);
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+p.content {
+    color: rgb(0, 0, 0);
+    display: inline;
+    vertical-align: top;
+    margin: 0 20px;
+}
+
+p.right {
+    float: right;
+}
+
+p.main {
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+}
+
+p.news {
+    color: rgb(0, 0, 0);
+    margin: 0 20px;
+}
+
+p.date {
+    margin-top: -34px;
+    float: right;
+    color: rgb(0, 0, 0);
+}
+
+p.about {
+    color: rgb(0, 0, 0);
+    margin-left: 30px;
+    text-align: left;
+}
+
+img.logo {
+    float: left;
+    margin-left: 15%;
+    margin-top: 10px;
+}
+
+img.content {
+    height: 200px;
+    border-radius: 5px;
+}
+
+img.main {
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+
+}
+
+img.goTop {
+    width: 70px;
+    height: 70px;
+}
+
+img.footer {
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+form.search {
+    float: right;
+    margin-right: 15%;
+}
+
+input.search {
+    width: 200px;
+    height: 31px;
+    padding-left: 10px;
+    padding-right: 5px;
+    outline: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    background: rgb(200, 200, 200);
+    border: 1px solid black;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    transition: all .6s ease;
+}
+
+input.search:focus {
+    width: 350px;
+    height: 37px;
+    color: white;
+    background: rgb(30, 30, 30);
+    border: 1px solid rgb(255, 255, 255);
+    border-right: 0;
+}
+
+button.search {
+    margin-left: -4px;
+    height: 31px;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    background: rgb(200, 200, 200);
+    border: 1px solid black;
+    border-left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+button.search:focus {
+    height: 37px;
+    color: white;
+    background: rgb(30, 30, 30);
+    border: 1px solid rgb(255, 255, 255);
+    border-left: 0;
+}
+
+button.test {
+    color: black;
+    margin-left: 30px;
+    height: 30px;
+    background: rgb(255, 255, 0);
+    border: 1px solid rgb(0, 255, 255);
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+
+button.test:hover {
+    background: rgb(0, 255, 255);
+    border: 1px solid rgb(255, 255, 0);
+}

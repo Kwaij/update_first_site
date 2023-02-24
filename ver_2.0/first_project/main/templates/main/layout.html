@@ -1,0 +1,76 @@
+{% load static %}
+{% load main_tags %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kwaij">
+    <meta name="description" content="Kwaij's site">
+    <meta name="keywords" content="Kwaij, site, html">
+    <title>{% block title %}{% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head> 
+<body>
+    <a name="goTop"></a>
+    <header>
+        <a href="{% url 'home' %}">
+            <img class="logo" src="{% static 'main/img/logo.png' %}" alt="">
+            <h1 class="name_site">Kwaij's site</h1></a>
+        <ul class="navigation">
+            {% show_menu %}
+        </ul>
+        <form class="search" action="{% url 'search' %}" method="get">
+            <input class="search" type="search" name="q" placeholder="Поиск по сайту" required>
+            <button class="search" type="submit">Поиск</button>
+        </form>
+    </header>
+    <main>
+        {% block content %} 
+        {% endblock %}
+
+        {% if page_obj.has_other_pages %}<br>
+        <nav class="paginator">
+            <ul class="paginator">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}"><li class="paginator">&lt;</li></a>
+                {% endif %}
+                {% for p in page_obj.paginator.page_range %}
+                    {% if page_obj.number == p %}
+                        <li class="paginator_up">{{ p }}</li>
+                    {% elif p >= page_obj.number|add:-3 and p <= page_obj.number|add:3 %}
+                        <a href="?page={{ p }}"><li class="paginator">{{ p }}</li></a>
+                    {% endif %}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}"><li class="paginator">&gt;</li></a>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+
+        <br><br>
+    </main>
+    <footer>
+        <a class="goTop" href="#goTop">&#8593;</a>
+        <div class="footer">
+            <a href="{% url 'home' %}">
+                <img class="footer" src="{% static 'main/img/logo.png' %}" alt="">
+                <h1 class="footer_name">Kwaij's site</h1>
+            </a>
+        </div>
+        <div class="links">
+            <h1 class="footer">Ссылки:</h1><br>
+            <a class="footer" href="https://github.com/Kwaij" target="_blank">GitHub</a><br>
+            <a class="footer" href="https://www.twitch.tv/kwaij" target="_blank">Twitch</a><br>
+            <a class="footer" href="https://www.youtube.com/c/Kwaij" target="_blank">TouTube</a><br>
+            <a class="footer" href="https://t.me/+m7WUfxeQIgM3NjYy" target="_blank">Telegram</a><br>
+            <br><br>
+        </div>
+    </footer>
+    <script src="{% static 'main/js/script.js' %}"></script>
+</body>
+</html>
